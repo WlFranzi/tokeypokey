@@ -1,0 +1,15 @@
+
+
+
+
+<p> TokeyPokey </p>
+
+
+<%= link_to "new.Trip", new_trip_path %>
+
+<% @trips.each do |trip| %>
+	<h2><%= link_to(trip.name, trip_path(trip) )%></h2>
+	<p><%= trip.user.name %></p>
+<% end %>
+
+
