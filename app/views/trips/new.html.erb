@@ -1,0 +1,10 @@
+
+
+<%= form_for :trip do |t| %>
+  Name : <%= t.text_field :name %><br />
+  Duration : <%= t.text_area :duration %><br />
+  Continent : <%= t.text_field :continent %><br />
+  Country : <%= t.text_area :country %><br />
+  Photo    : <%= t.text_area :photo %><br />
+  <%= t.submit %>
+<% end %>
