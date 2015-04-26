@@ -1,3 +1,4 @@
+<p><a href="https://38.media.tumblr.com/8cc10e87c4d8820a1bedd75f2eaa4d06/tumblr_inline_mpu7m6Xi7O1qz4rgp.gif"><img src="../../images/koffer.png" style="width:120px;height:100px"/></a></p>
 <p> TokeyPokey </p>
 
 
@@ -5,9 +6,21 @@
 <%= link_to "new.Stop", new_stop_path %>
 
 
+<table>
+    <thead>
+        <th>Name</th>
+        <th>user</th>
+        <th>Continent</th>
+        <th>Country</th>
+    </thead>
+    <tbody>
 <% @trips.each do |trip| %>
-	<h2><%= link_to(trip.name, trip_path(trip) )%></h2>
-	<p><%= trip.user.name %></p>
+    <tr>
+    <td><%= link_to(trip.name, trip_path(trip) )%></td>        
+    <td><%= trip.duration %></td>
+    <td><%= trip.continent %></td>
+    <td><%= trip.country %></td>
+    </tr>
 <% end %>
-
-
+    </tbody>
+</table>

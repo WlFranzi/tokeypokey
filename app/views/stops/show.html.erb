@@ -1,9 +1,8 @@
 
-<%= @stop.name %>
+<%= @stops.name %>
 <br>
-<%= @stop.description %>
-<br>
-<%= @stop.photo %>
+<%= @stops.description %>
 <br>
 <%= link_to "Back", stops_path %>
-<%= link_to "Edit", edit_stop_path(@user)
+<%= link_to "Edit", edit_stop_path(@stops) %>
+
