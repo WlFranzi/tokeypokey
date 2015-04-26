@@ -1,0 +1,15 @@
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+<% @stops.each do |stop| %>
+    <tr>
+        <td><%= stop.name %></td>
+        <td><%= stop.email %></td>
+    </tr>
+<% end %>
+    </tbody>
+</table>
