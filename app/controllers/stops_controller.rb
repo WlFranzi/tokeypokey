@@ -1,15 +1,17 @@
 class StopsController < ApplicationController
+  
   def new
-    @stops = Stop.new
+    @stop = Stop.new
   end
 
   def create
     @stops = Stop.new(params[:stop])
-    if @stops.save
-        redirect_to @stops, alert: "Stop created successfully."
+    if @stop.save
+        redirect_to @stop, alert: "Stop created successfully."
     else
-        redirect_to new_stop_path, alert: "Error creating Stop."
+        redirect_to new_stop_path, alert: "Error creating stop."
   end
+end
 
   def show
     @stops = Stop.find(params[:id])
