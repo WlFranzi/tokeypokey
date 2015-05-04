@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   post 'trips/new'
   resources :stops
   post 'stop/new'
+  resources :users
 
 end

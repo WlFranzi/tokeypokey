@@ -1,0 +1,33 @@
+
+
+<%= @user.name %>
+<br>
+<%= @user.email %>
+<br>
+<%= @user.password %>
+
+
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>User</th>
+        <th>Continent</th>
+        <th>Country</th>
+    </thead>
+    <tbody>
+<% @user.trips.each do |trip| %>
+    <tr>
+    <td><%= link_to(trip.name, trip_path(trip) )%></td>  
+    <td><%= trip.user.name %></td>      
+    <td><%= trip.duration %></td>
+    <td><%= trip.continent %></td>
+    <td><%= trip.country %></td>
+    </tr>
+<% end %>
+    </tbody>
+</table>
+
+
+
+

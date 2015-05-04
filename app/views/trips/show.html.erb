@@ -1,5 +1,5 @@
 
-
+<table>
 <%= @trip.name %>
 <br>
 <%= @trip.duration %>
@@ -8,8 +8,22 @@
 <br>
 <%= @trip.country %>
 
-<br>
+<br><br><br>
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>description</th>
+    </thead>
+
+<tbody>
+<% @trip.stops.each do |stop| %>
+    <td><%= stop.name %></td>
+    <td><%= stop.description %></td>
+<% end %>
+</tbody>
+</table>
+
+<br><br><br>
+
 <%= link_to "Back", trips_path %>
-
-
-
